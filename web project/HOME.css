@@ -179,12 +179,6 @@ body {
 }
 
 
-.page:focus {
-    outline: 2px solid rgba(20, 34, 78, 0.8);
-    outline-offset: 2px;
-}
-
-
 body::after{
     content: '';
     position: fixed;
@@ -199,4 +193,5 @@ body::after{
     );
     pointer-events: none;
     z-index: -1;
+
 }
