@@ -1,0 +1,198 @@
+body {
+    background-image: url('1.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    filter: brightness(135%);
+    min-height: 100vh;
+}
+
+
+.pages {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    z-index: 100;
+}
+
+.page {
+    background-color: rgba(16, 32, 85, 0.85);
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    border: 2px solid rgba(49, 116, 161, 0.3);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+
+.page:hover {
+    background-color: rgba(102, 63, 122, 0.9);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+
+.hi {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Courier, monospace;
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    background: rgba(16, 32, 85, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+}
+
+.hi h2 {
+    font-size: 90px;
+    font-family: "Permanent Marker", cursive;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1;
+}
+
+.hi h1 {
+    font-size: 70px;
+    font-family: 'Handlee', cursive;
+    color: rgb(255, 255, 255);
+    margin: 10px 0;
+    font-weight: bold;
+    line-height: 1.5 cm;
+}
+
+.hi h3 {
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 15px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    
+}
+
+.center {
+    display: block;
+    margin-top: 10px;
+    font-size: 34px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .pages {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .page {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+    
+    .hi {
+        left: 20px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .hi h2 {
+        font-size: 60px;
+    }
+    
+    .hi h1 {
+        font-size: 50px;
+    }
+    
+    .hi h3 {
+        font-size: 24px;
+    }
+    
+    .center {
+        font-size: 26px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .hi {
+        left: 80px;
+        max-width: 700px;
+    }
+    
+    .hi h2 {
+        font-size: 100px;
+    }
+    
+    .hi h1 {
+        font-size: 80px;
+    }
+}
+
+
+@keyframes subtleFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+}
+
+.hi h2 {
+    animation: subtleFloat 5s ease-in-out infinite;
+}
+
+
+.page:active {
+    transform: scale(0.98);
+}
+
+
+
+
+body::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(32, 53, 120, 0.1) 0%,
+        rgba(16, 32, 85, 0.3) 100%
+    );
+    pointer-events: none;
+    z-index: -1;
+}
